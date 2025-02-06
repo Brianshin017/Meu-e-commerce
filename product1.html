@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produto Exemplo 1 - Meu E-commerce</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container my-4">
+    <!-- Botão para voltar à página inicial -->
+    <a href="index.html" class="btn btn-secondary mb-3">Voltar</a>
+    <div class="row">
+      <!-- Seção da imagem do produto -->
+      <div class="col-md-6">
+        <img src="product1.jpg" class="img-fluid" alt="Produto Exemplo 1">
+      </div>
+      <!-- Seção de informações e especificações -->
+      <div class="col-md-6">
+        <h1>Produto Exemplo 1</h1>
+        <p class="lead">R$149.00</p>
+        <h3>Especificações:</h3>
+        <ul>
+          <li>Material: Silicone premium</li>
+          <li>Compatibilidade: Samsung atmosfere</li>
+          <li>Cor: Azul</li>
+          <li>Proteção: Alta absorção de impacto</li>
+          <li>Outros detalhes técnicos...</li>
+        </ul>
+        <!-- Botão de Comprar com a classe 'comprar-btn' para o efeito de hover -->
+        <button id="comprarBtn" class="btn comprar-btn btn-lg mt-3">Comprar</button>
+    
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script personalizado (ex.: integração com sistema de pagamento) -->
+  <script src="script.js"></script>
+  <script>
+    // Ao clicar no botão "Comprar", aciona a função de checkout (simulação ou integração)
+    document.getElementById('comprarBtn').addEventListener('click', function() {
+  window.location.href = 'checkout.html';
+// Aqui você pode chamar a função do seu script.js que lida com a finalização da compra
+      // Exemplo de simulação:
+      alert('Integração com sistema de pagamento em desenvolvimento!');
+
+});
+
+      
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout - Meu E-commerce</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container my-4">
+    <!-- Botão para voltar -->
+    <a href="javascript:history.back()" class="btn btn-secondary mb-3">Voltar</a>
+    
+    <h1 class="mb-4">Opções de Pagamento</h1>
+    
+    <form id="paymentForm">
+      <!-- Opções de Pagamento -->
+      <div class="mb-3">
+        <label class="form-label">Escolha a forma de pagamento:</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="paymentOption" id="avista" value="avista" checked>
+          <label class="form-check-label" for="avista">Pagar à vista</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="paymentOption" id="parcelado" value="parcelado">
+          <label class="form-check-label" for="parcelado">Pagar em 12x</label>
+        </div>
+      </div>
+      
+      <!-- Cupom de Promoção -->
+      <div class="mb-3">
+        <label for="coupon" class="form-label">Cupom de Promoção (opcional):</label>
+        <input type="text" class="form-control" id="coupon" placeholder="Insira seu cupom">
+      </div>
+      
+      <!-- Dados do Cartão de Crédito -->
+      <h2 class="mt-4">Dados do Cartão de Crédito</h2>
+      <div class="mb-3">
+        <label for="cardNumber" class="form-label">Número do Cartão</label>
+        <input type="text" class="form-control" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="expiryDate" class="form-label">Data de Validade</label>
+          <input type="text" class="form-control" id="expiryDate" placeholder="MM/AA" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="cvc" class="form-label">CVC</label>
+          <input type="text" class="form-control" id="cvc" placeholder="XXX" required>
+        </div>
+      </div>
+      
+      <!-- Botão de Finalizar Compra -->
+      <button type="submit" class="btn btn-success finalizar-btn">Finalizar Compra</button>
+    </form>
+  </div>
+  
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script para simulação de pagamento -->
+  <script>
+    document.getElementById('paymentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Aqui você pode integrar com a API de pagamento ou simular a finalização
+      alert('Pagamento processado com sucesso!');
+    });
+  </script>
+</body>
+</html>
